@@ -1,0 +1,135 @@
+{
+    "loveSong": [
+      {
+        "title": "Tere Bina Na gujara Hai",
+        "author": "Josh Brar ",
+        "audio": "/love1.mp3",
+        "img": "https://c.saavncdn.com/683/Tere-Bina-Na-Guzara-E-Punjabi-2024-20240925154603-500x500.jpg",
+        "info": "Punjabi Song"
+      },
+      {
+        "title": "Zaroor",
+        "author": "Aparshakti Khurana",
+        "audio": "/love2.mp3",
+        "img": "https://i.ytimg.com/vi/JSDorYRTJjQ/sddefault.jpg",
+        "info": "Sony Music Entertainment India Pvt. Ltd."
+      },
+      {
+        "title": "CHAL DIYE TUM KAHAN",
+        "author": "AUR",
+        "audio": "/love3.mp3",
+        "img": "https://i.ytimg.com/vi/AMfuIWDUDHg/maxresdefault.jpg",
+        "info": "KABHI MAIN KABHI TUM"
+      },
+      {
+        "title": "Tere Naina",
+        "author": "Shafqat Amanat Ali",
+        "audio": "/love4.mp3",
+        "img": "https://i.ytimg.com/vi/uc43tD6-E4U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCF7BIbKd6_2n-8-O7sS9RDf9ZyMQ",
+        "info": "My Name is Khan"
+      },
+      {
+        "title": "blue",
+        "author": "yung kai",
+        "audio": "/love5.mp3",
+        "img": "https://asset-2.tstatic.net/kaltim/foto/bank/images/20241217_terjemahan-lirik-lagu-blue-yung-kai.jpg",
+        "info": "blue album"
+      },
+      {
+        "title": "Dil Se Dil",
+        "author": "Shashwat Singh",
+        "audio": "/love6.mp3",
+        "img": "https://i.ytimg.com/vi/suC_Y2eZtAw/hqdefault.jpg",
+        "info": "Sita Ramam (Hindi)"
+      }
+    ],
+    "sadSong": [
+      {
+        "title": "Bulleya ",
+        "author": "Papon",
+        "audio": "/sad1.mp3",
+        "img": "https://i.ytimg.com/vi/3Y4kqxdBEQ0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD0Lmp8XYoSNzrMmMDD74kp45CXvA",
+        "info": "Sultan "
+      },
+      {
+        "title": "Shiddat Title",
+        "author": "Manan Bhardwaj",
+        "audio": "/sad2.mp3",
+        "img": "https://i.ytimg.com/vi/iSo9l950QLo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC3LocvtHc-ki8G5NB3i3ujCg_-Yw",
+        "info": "Shiddat Title Track"
+      },
+      {
+        "title": "Teri Deewani ",
+        "author": "Kailash Kher",
+        "audio": "/sad3.mp3",
+        "img": "https://i.ytimg.com/vi/zZasH6qkn8M/maxresdefault.jpg",
+        "info": "SONY BMG MUSIC ENTERTAINMENT (India) Pvt. Ltd. "
+      },
+      {
+        "title": "Saiyyan",
+        "author": "Kailash Kher",
+        "audio": "/sad4.mp3",
+        "img": "https://i.ytimg.com/vi/TuUVVKVdZm4/maxresdefault.jpg",
+        "info": " SONY BMG MUSIC ENTERTAINMENT (INDIA) PVT LTD."
+      },
+      {
+        "title": "Main Agar Kahoon ",
+        "author": "Sonu Nigam, Shreya Ghosal",
+        "audio": "/sad5.mp3",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCM34wzrlFxQnFePVYeDL-Oeq9SgqE8Mtm7A&s",
+        "info": "Om Shanti Om  "
+      },
+      {
+        "title": "JAB TAK",
+        "author": " Armaan Malik",
+        "audio": "/sad6.mp3",
+        "img": "https://i.ytimg.com/vi/K-Ts-NFR62o/maxresdefault.jpg",
+        "info": "M.S. DHONI -THE UNTOLD STORY"
+      }
+    ],
+    "gymFryK": [
+      {
+        "title": "Believer",
+        "author": "Imagine Dragons",
+        "audio": "/gym1.mp3",
+        "img": "https://i.ytimg.com/vi/I73QW0AbAeo/maxresdefault.jpg",
+        "info": "Believer"
+      },
+      {
+        "title": "Legends Never Die",
+        "author": "ft. Against The Current",
+        "audio": "/gym2.mp3",
+        "img": "https://i.ytimg.com/vi/4Q46xYqUwZQ/maxresdefault.jpg",
+        "info": "Legends Never Die"
+      },
+      {
+        "title": "AURA",
+        "author": "Ogryzek",
+        "audio": "/gym3.mp3",
+        "img": "https://i.ytimg.com/vi/E0XtpdQafWg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAHaG84UODn57KuV3uEiH-3WON6Ug",
+        "info": "Super Slowed"
+      },
+      {
+        "title": "Royalty",
+        "author": "Egzod & Maestro chives",
+        "audio": "/gym4.mp3",
+        "img": "https://i.ytimg.com/vi/lW9ep22YmlM/maxresdefault.jpg",
+        "info": "slowed + reverb"
+      },
+      {
+        "title": "Enemy",
+        "author": "Imagine Dragons x JID",
+        "audio": "/gym5.mp3",
+        "img": "https://i.ytimg.com/vi/vxa8ShIm9yw/maxresdefault.jpg",
+        "info": "Enemy"
+      },
+      {
+        "title": "Darkside",
+        "author": "NEONI",
+        "audio": "/gym6.mp3",
+        "img": "https://i.ytimg.com/vi/zgZWjm8qBws/maxresdefault.jpg",
+        "info": "Darkside"
+      }
+    ]
+  }
+  
