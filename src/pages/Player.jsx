@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
-import Banner from '../components/Home/Banner';
-import SongList from '../components/Home/SongList';
 import Footer from '../components/Footer';
-import ArtistPreferenceForm from '../components/Home/ArtistPreferenceForm';
-import YouTubeVideo from '../components/Home/YouTubeVideo';
+import MusicPlayer from '../components/MusicPlayer';
 
-function Home() {
+function Player() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -28,10 +25,7 @@ function Home() {
           <div className="px-4 sm:px-6 lg:px-8 py-4 w-full max-w-9xl mx-auto">
             {/* Home Page */}
             <div className="overflow-hide h-full">
-              <Banner />
-              <SongList />
-              <ArtistPreferenceForm />
-              <YouTubeVideo />
+              <MusicPlayer />
             </div>
           </div>
         </main>
@@ -42,4 +36,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Player;

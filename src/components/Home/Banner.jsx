@@ -86,9 +86,9 @@ function Banner() {
 
   return (
     <section>
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-xl mx-auto px-1 lg:px-8">
         {/* Banner container */}
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-8">
+        <div className="block md:flex md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-8">
 
           {/* Playlist of the Day */}
           <div className="flex-1 text-center md:text-left text-white bg-[#220125] py-8 px-6 rounded-xl">
@@ -101,7 +101,7 @@ function Banner() {
             </div>
 
           {/* Song Section */}
-          <div className="flex-1 rounded-xl overflow-hidden shadow-lg relative"
+          <div className="flex-1 rounded-xl hidden overflow-hidden shadow-lg relative"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}>
             <div
