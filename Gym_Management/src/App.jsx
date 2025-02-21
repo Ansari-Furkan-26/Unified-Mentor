@@ -41,7 +41,7 @@ function App() {
     { path: '/manage-shop', element: <ProtectedRoute element={<Shop />} adminOnly /> },
     { path: '*', element: <Navigate to="/" replace /> },
   ];
-
+  
   const routesElement = useRoutes(routesArray);
 
   return (

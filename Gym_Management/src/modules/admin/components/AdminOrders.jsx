@@ -25,7 +25,7 @@ const AdminNotification = () => {
   }, []);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 mt-14 px-4">
       
         <h1 className="text-3xl font-semibold ml-8 md:ml-0">Orders</h1>
       {notifications.length > 0 ? (

@@ -37,8 +37,8 @@ const AdminSubscription = () => {
   };
 
   return (
-    <div className="space-x-4 bg-gray-50 min-h-screen">
-      <h1 className="text-2xl font-semibold mb-4 mt-1 md:ml-4 ml-12">Add Subscription Plan</h1>
+    <div className="space-x-4 mt-14 pr-2 bg-gray-50 min-h-screen">
+      <h1 className="text-2xl font-bold mb-4 mt-1 md:ml-4 ml-12">Add Subscription Plan</h1>
       <form onSubmit={handleSubmit} className="space-y-4 bg-white p-4 shadow rounded-lg">
         <input
           type="text"

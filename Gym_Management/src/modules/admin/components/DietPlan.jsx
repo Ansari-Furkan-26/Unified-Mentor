@@ -39,7 +39,7 @@ const AdminDietPlanForm = () => {
   };
 
   return (
-    <div className="px-4 bg-gray-50 min-h-screen">
+    <div className="px-4 bg-gray-50 mt-14 min-h-screen">
       <h1 className="text-2xl font-bold mb-4 md:ml-0 ml-8 mt-1">Add Diet Plan</h1>
       <form onSubmit={handleSubmit} className="space-y-4 bg-white p-4 shadow rounded-lg">
         <input

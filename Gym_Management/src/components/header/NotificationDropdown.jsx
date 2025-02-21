@@ -5,6 +5,7 @@ import { FaBell } from 'react-icons/fa';
 const NotificationDropdown = ({ currentUser }) => {
   const [subscriptionNotifications, setSubscriptionNotifications] = useState([]);
   const [orderNotifications, setOrderNotifications] = useState([]);
+  const [broadcastNotifications, setBroadcastNotifications] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
   const db = getDatabase();
@@ -17,43 +18,44 @@ const NotificationDropdown = ({ currentUser }) => {
 
     const subscriptionRef = ref(db, 'notifications/subscription');
     const ordersRef = ref(db, 'notifications/Orders');
+    const broadcastRef = ref(db, 'notifications/broadcast');
 
     // Fetch Subscription Notifications
     onValue(subscriptionRef, (snapshot) => {
       const data = snapshot.val();
-      const notifications = [];
-      if (data) {
-        Object.entries(data).forEach(([key, value]) => {
-          notifications.push({ id: key, ...value });
-        });
-      }
+      const notifications = data ? Object.entries(data).map(([key, value]) => ({ id: key, ...value })) : [];
       setSubscriptionNotifications(notifications);
     });
 
     // Fetch Order Notifications
     onValue(ordersRef, (snapshot) => {
       const data = snapshot.val();
-      const notifications = [];
-      if (data) {
-        Object.entries(data).forEach(([key, value]) => {
-          if (value.userId === userId) {
-            notifications.push({ id: key, ...value });
-          }
-        });
-      }
+      const notifications = data
+        ? Object.entries(data)
+            .filter(([_, value]) => value.userId === userId)
+            .map(([key, value]) => ({ id: key, ...value }))
+        : [];
       setOrderNotifications(notifications);
+    });
+
+    // Fetch Broadcast Notifications (Visible to All Users)
+    onValue(broadcastRef, (snapshot) => {
+      const data = snapshot.val();
+      const notifications = data ? Object.entries(data).map(([key, value]) => ({ id: key, ...value })) : [];
+      setBroadcastNotifications(notifications);
     });
 
     return () => {
       off(subscriptionRef);
       off(ordersRef);
+      off(broadcastRef);
     };
   }, [currentUser, db]);
 
   useEffect(() => {
-    const totalNotifications = subscriptionNotifications.length + orderNotifications.length;
+    const totalNotifications = subscriptionNotifications.length + orderNotifications.length + broadcastNotifications.length;
     setUnreadCount(totalNotifications);
-  }, [subscriptionNotifications, orderNotifications]);
+  }, [subscriptionNotifications, orderNotifications, broadcastNotifications]);
 
   const handleDropdownToggle = () => {
     setDropdownOpen(!dropdownOpen);
@@ -65,6 +67,7 @@ const NotificationDropdown = ({ currentUser }) => {
   const sortedNotifications = [
     ...subscriptionNotifications.map((n) => ({ ...n, type: 'subscription' })),
     ...orderNotifications.map((n) => ({ ...n, type: 'order' })),
+    ...broadcastNotifications.map((n) => ({ ...n, type: 'broadcast' })),
   ].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
   useEffect(() => {
@@ -106,11 +109,17 @@ const NotificationDropdown = ({ currentUser }) => {
                       <p className="font-semibold">{notification.title}</p>
                       <p className="text-gray-600">{notification.message}</p>
                     </>
-                  ) : (
+                  ) : notification.type === 'order' ? (
                     <>
-                    <h1 className='font-bold'>Your Order Has Been Placed 📦</h1>
-                      <p className="font-semibold"> {notification.productName}</p>
+                      <h1 className='font-bold'>Your Order Has Been Placed 📦</h1>
+                      <p className="font-semibold">{notification.productName}</p>
                       <p>Price: ₹{notification.price}</p>
+                    </>
+                  ) : (
+                    // Broadcast Message (For All Users)
+                    <>
+                      <h1 className="font-bold">📢 Announcement</h1>
+                      <p className="text-gray-600">{notification.message}</p>
                     </>
                   )}
                   <p className="text-xs text-gray-400 mt-1">

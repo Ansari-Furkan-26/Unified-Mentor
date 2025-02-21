@@ -142,14 +142,12 @@ const AdminMemberManagement = () => {
   };
 
   return (
-    <div className="pt-9 min-h-screen">
-      <h2 className="text-2xl mb-4 ml-8 mt-1 md:ml-0 ">Member Management</h2>
-      <div className="flex gap-4 mb-4 text-base">
-        <button
-          onClick={() => {
-            resetForm();
-            setModalOpen(true);
-          }}
+    <div className="pt-9 min-h-screen bg-gray-50">
+
+      <h2 className="text-2xl">Member Management</h2>
+      <div className="flex gap-4 mt-2 mb-4 text-sm">
+        <button onClick={() => {resetForm();
+            setModalOpen(true);}}
           className="bg-green-600 text-white px-4 py-2 rounded-lg">
           Add Member
         </button>

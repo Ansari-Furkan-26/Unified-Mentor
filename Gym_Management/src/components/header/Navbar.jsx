@@ -55,9 +55,8 @@ const Navbar = () => {
             <div ref={profileRef} className="relative">
               <button
                 onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
-                className="focus:outline-none"
-              >
-                <FaUserCircle size={28} className="text-blue-600" />
+                className="focus:outline-none">
+                  <img src="https://i.pinimg.com/736x/f9/5e/63/f95e63b800564fdf1dae1d005905071a.jpg" size={28} className="h-8 rounded-full" alt="" />
               </button>
 
               {profileDropdownOpen && (
@@ -66,16 +65,13 @@ const Navbar = () => {
                   <Link
                     to={isAdmin ? '/admin' : '/home'}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    onClick={() => setProfileDropdownOpen(false)}
-                  >
+                    onClick={() => setProfileDropdownOpen(false)}>
                     Account
                   </Link>
 
-                  
                   <button
                     onClick={handleLogout}
-                    className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100"
-                  >
+                    className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100">
                     Logout
                   </button>
                 </div>

@@ -74,7 +74,7 @@ const SupplementStore = () => {
   };
 
   return (
-    <div className="px-4 bg-gray-50 min-h-screen">
+    <div className="px-4 bg-gray-50 mt-14 min-h-screen">
       <h1 className="text-2xl font-bold mb-4 mt-1 md:ml-0 ml-8">Supplement Store</h1>
 
       <div className="mb-6 bg-white p-4 rounded-lg shadow-md">
