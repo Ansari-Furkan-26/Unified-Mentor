@@ -42,9 +42,9 @@ const CallToAction = () => {
       <div className="relative text-center space-y-6 max-w-5xl mx-auto">
         {user ? (
           <>
-            <h2 className="text-4xl md:text-6xl font-bold uppercase leading-snug tracking-tight">
+            <h2 className="text-2xl md:text-6xl font-bold uppercase leading-snug tracking-tight">
               We value your experience! <br />Please provide your feedback.</h2>
-            <p className="md:text-lg leading-relaxed">We strive for excellence—your insights help us reach it. Share your thoughts!</p>
+            <p className="text-sm md:text-lg leading-relaxed">We strive for excellence—your insights help us reach it. Share your thoughts!</p>
             <div className="mt-4">
               <input
                 className="w-full p-3 text-black rounded-md"
@@ -60,10 +60,10 @@ const CallToAction = () => {
           </>
         ) : (
           <>
-            <h2 className="text-4xl md:text-6xl font-bold uppercase leading-snug tracking-tight">
+            <h2 className="text-2xl md:text-6xl font-bold uppercase leading-snug tracking-tight">
               What are you waiting for? <br />Let’s register yourself now.
             </h2>
-            <p className="md:text-lg leading-relaxed">
+            <p className="text-sm md:text-lg leading-relaxed">
               Here, we not only offer the best fitness equipment but also a supportive environment and training programs specifically designed to help you achieve your fitness goals.
             </p>
             <Link to="/register">

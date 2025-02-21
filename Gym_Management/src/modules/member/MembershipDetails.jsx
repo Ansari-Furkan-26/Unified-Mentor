@@ -98,7 +98,7 @@ const MembershipDetails = () => {
       </div>
 
       {/* Right Section */}
-      <div ref={billRef} className="p-6 bg-white shadow-md rounded-lg w-full max-w-sm relative md:max-w-md lg:max-w-lg">
+      <div ref={billRef} className="p-6 bg-white shadow-md rounded-lg w-full relative md:max-w-md lg:max-w-lg">
         <h2 className="text-2xl text-center font-bold mb-4">Membership Details</h2>
 
         <div className="flex flex-col items-center mb-4">
