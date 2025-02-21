@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ref, get, set } from "firebase/database";
+import { ref, get, set, push } from "firebase/database";
 import { database } from "../../../firebase/firebase";
 import { Users, ShoppingBag, Package, Bell, Send, X } from "lucide-react";
 import CountUp from "react-countup";
@@ -39,8 +39,11 @@ const NotificationSender = () => {
 
     setLoading(true);
     try {
-      const msgRef = ref(database, "notifications/broadcast");
-      await set(msgRef, { message, timestamp: Date.now() });
+      const newMsgRef = push(ref(database, "notifications/broadcast"));
+      await set(newMsgRef, {
+        message,
+        timestamp: new Date().toISOString(),
+      });
       showPopup("Message sent successfully!", "success");
       setMessage("");
     } catch (error) {
@@ -64,7 +67,7 @@ const NotificationSender = () => {
 
   return (
     <div className="pt-10 bg-gray-50 mx-auto">
-      <h1 className="text-2xl font-bold mb-4 ml-6 md:ml-0">📊 Dashboard Overview</h1>
+      <h1 className="text-2xl font-bold mb-4 ml-6 md:ml-0">Dashboard Overview</h1>
       
       {/* Main Container: Stats + Notification Sender */}
       <div className="flex flex-col lg:flex-row gap-6 w-full">
@@ -113,7 +116,7 @@ const NotificationSender = () => {
       {/* Popup Notification */}
       {popup && (
         <div
-          className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-lg text-white shadow-lg flex items-center gap-2 ${
+          className={`fixed top-14 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-lg text-white shadow-lg flex items-center gap-2 ${
             popup.type === "success" ? "bg-green-500" : "bg-red-500"
           }`}
         >
